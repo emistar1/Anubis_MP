@@ -965,8 +965,9 @@ with ui.element('div').style(
     ui.timer(1.0, _update_progress)
     ui.timer(2.0, _check_for_updates, once=True)
 
-if __name__ in {'__main__', '__mp_main__'}:
+
     ui.run(
+        loop='asyncio',
         title='Anubis MP',
         dark=True,
         native=True,
